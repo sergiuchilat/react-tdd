@@ -1,7 +1,7 @@
-import {parseFiltersFromURL} from "../../utils/filter-manager"
+import {parseFiltersFromURL} from "utils/filter-manager"
 
 export default class ProductsAPI{
-  async get(filters){
+  async get(filters = ''){
     const parsedFilters = parseFiltersFromURL(filters);
     const products = [];
     const productsTypes = ['Car', 'Airplane', 'Bus', 'Train', 'Sheep'];

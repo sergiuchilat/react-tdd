@@ -15,7 +15,7 @@ export default function FilterPrice({from, to, onChange}){
   }
   return (
     <div>
-      <div>
+      <div className={'priceRange'}>
         Price from
         <input
           name={'filter-price-from'}
