@@ -29,7 +29,6 @@ export default class ProductsAPI{
           parsedFilters.priceTo && product.price <= Number(parsedFilters.priceTo)
         )
       ){
-        console.log(Number(parsedFilters.priceTo), product.price)
         filteredProducts.push(product);
       }
     }

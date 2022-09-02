@@ -1,4 +1,5 @@
 import {useState} from "react"
+import PropTypes from "prop-types";
 
 export default function FilterPrice({from, to, onChange}){
   const [priceFrom, setPriceFrom] = useState(from);
@@ -33,4 +34,10 @@ export default function FilterPrice({from, to, onChange}){
       </div>
     </div>
   )
+}
+
+FilterPrice.propTypes = {
+  from: PropTypes.number,
+  to: PropTypes.number,
+  onChange: PropTypes.func
 }

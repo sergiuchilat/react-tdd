@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function FilterName({value, onChange}){
   const handleChange = (event) => {
     const value = event.target.value;
@@ -8,7 +10,7 @@ export default function FilterName({value, onChange}){
       <div>
         Name
         <input
-          name={'filter-age-ro'}
+          name={'filter-name'}
           type="text"
           value={value}
           onChange={(event) => {handleChange(event)}}
@@ -16,4 +18,9 @@ export default function FilterName({value, onChange}){
       </div>
     </div>
   )
+}
+
+FilterName.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func
 }
